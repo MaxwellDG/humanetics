@@ -1,0 +1,182 @@
+.App {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.dummy-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .node {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid lightblue;
+    z-index: 999;
+  }
+
+  .head {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+
+    .one {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .two {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+
+    .three {
+      top: 100px;
+      left: 100px;
+      transform: translate(-50%, -50%);
+    }
+
+    .four {
+      top: 100px;
+      right: 100px;
+      transform: translate(50%, -50%);
+    }
+
+    .five {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    .six{
+      top: 50px;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    .seven{
+      top: 50px;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+
+    .left-forearm {
+      margin-top: 50px;
+      width: 100px;
+      height: 50px;
+      background: linear-gradient(
+        to top right,
+        white calc(50% - 1.5px),
+        black,
+        white calc(50% + 1.5px)
+      );
+    }
+
+    .right-forearm {
+      margin-top: 50px;
+      width: 100px;
+      height: 50px;
+      background: linear-gradient(
+        to bottom right,
+        white calc(50% - 1.5px),
+        black,
+        white calc(50% + 1.5px)
+      );
+    }
+
+    .arm {
+      width: 100px;
+      height: 2px;
+      background-color: black;
+      margin-top: 100px;
+    }
+
+    .torso {
+      height: 200px;
+      width: 3px;
+      background-color: black;
+    }
+  }
+
+  .legs {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .eight {
+      bottom: 0;
+      left: 0;
+      transform: translate(-50%, 50%);
+    }
+
+    .nine {
+      bottom: 0;
+      right: 0;
+      transform: translate(50%, 50%);
+    }
+
+    .right-leg {
+      height: 150px;
+      width: 50px;
+      background: linear-gradient(
+        to top right,
+        white calc(50% - 1.5px),
+        black,
+        white calc(50% + 1.5px)
+      );
+    }
+
+    .left-leg {
+      height: 150px;
+      width: 50px;
+      background: linear-gradient(
+        to top left,
+        white calc(50% - 1.5px),
+        black,
+        white calc(50% + 1.5px)
+      );
+    }
+  }
+}
+
+.input-con {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  p {
+    color: red;
+    margin: 10px;
+  }
+}
+
+.err-con{
+  height: 50px;
+}

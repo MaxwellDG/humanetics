@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import InputContainer from "./components/input-container";
+import DummyContainer from "./components/dummy-container";
+
+const COLOURS_HASH: Record<string, string> = {
+  G: 'green',
+  R: 'red',
+  Y: 'yellow',
+}
 
 function App() {
+  const [nodeColours, setNodeColours] = React.useState(Array(9).fill("lightgray"));
+
+  // str validated and length === 9
+  function changeColours(str: string) {
+    const newColours = [];
+    for (let i = 0; i < 9; i++) {
+      const char = str.charAt(i);
+      const colour = COLOURS_HASH[char]
+      newColours.push(colour)
+    }
+    setNodeColours(newColours);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DummyContainer nodeColours={nodeColours} />
+      <InputContainer changeColours={changeColours} />
     </div>
   );
 }
