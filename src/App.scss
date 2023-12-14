@@ -30,8 +30,8 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 600;
-  width: 600;
+  height: 300px;
+  width: 300px;
 }
 
 .spin-text {
@@ -50,7 +50,7 @@
   align-items: center;
 
   img {
-    width: 250px;
+    width: 150px;
     margin: 10px;
   }
 
@@ -66,8 +66,8 @@
   align-items: center;
 
   .node {
-    height: 30px;
-    width: 30px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     position: absolute;
     border: 1px solid lightblue;
@@ -75,8 +75,8 @@
   }
 
   .head {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     border: 2px solid black;
     position: relative;
@@ -121,8 +121,8 @@
     width: 400px;
 
     .three {
-      top: 100px;
-      left: 100px;
+      top: 50px;
+      left: 150px;
       transform: translate(-50%, -50%);
 
       &::before {
@@ -136,8 +136,8 @@
     }
 
     .four {
-      top: 100px;
-      right: 100px;
+      top: 50px;
+      right: 150px;
       transform: translate(50%, -50%);
 
       &::before {
@@ -166,8 +166,8 @@
     }
 
     .six {
-      top: 50px;
-      left: 0;
+      top: 25px;
+      left: 100px;
       transform: translate(-50%, -50%);
 
       &::before {
@@ -181,8 +181,8 @@
     }
 
     .seven {
-      top: 50px;
-      right: 0;
+      top: 25px;
+      right: 100px;
       transform: translate(50%, -50%);
 
       &::before {
@@ -196,9 +196,9 @@
     }
 
     .left-forearm {
-      margin-top: 50px;
-      width: 100px;
-      height: 50px;
+      margin-top: 25px;
+      width: 50px;
+      height: 25px;
       background: linear-gradient(
         to top right,
         white calc(50% - 1.5px),
@@ -208,9 +208,9 @@
     }
 
     .right-forearm {
-      margin-top: 50px;
-      width: 100px;
-      height: 50px;
+      margin-top: 25px;
+      width: 50px;
+      height: 25px;
       background: linear-gradient(
         to bottom right,
         white calc(50% - 1.5px),
@@ -220,14 +220,14 @@
     }
 
     .arm {
-      width: 100px;
+      width: 50px;
       height: 2px;
       background-color: black;
-      margin-top: 100px;
+      margin-top: 50px;
     }
 
     .torso {
-      height: 200px;
+      height: 125px;
       width: 3px;
       background-color: black;
     }
@@ -269,7 +269,7 @@
     }
 
     .right-leg {
-      height: 150px;
+      height: 100px;
       width: 50px;
       background: linear-gradient(
         to top right,
@@ -280,7 +280,7 @@
     }
 
     .left-leg {
-      height: 150px;
+      height: 100px;
       width: 50px;
       background: linear-gradient(
         to top left,
@@ -312,4 +312,81 @@
 
 .err-con {
   height: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+  .spin-con{
+    height: 600px;
+    width: 600px;
+  }
+
+  .dummy-con{
+    .node{
+      height: 30px;
+      width: 30px;
+    }
+
+    .head{
+      height: 100px;
+      width: 100px;
+    }
+
+    .body{
+      .arm{
+        width: 100px;
+        margin-top: 100px;
+      }
+
+      .left-forearm{
+        margin-top: 50px;
+        width: 100px;
+        height: 50px;
+      }
+
+      .right-forearm{
+        margin-top: 50px;
+        width: 100px;
+        height: 50px;
+      }
+
+      .three{
+        top: 100px;
+        left: 100px;
+      }
+
+      .four{
+        top: 100px;
+        right: 100px;
+      }
+      
+      .six{
+        left: 0;
+        top: 50px;
+      }
+
+      .seven{
+        right: 0;
+        top: 50px;
+      }
+
+      .torso{
+        height: 200px;
+      }
+    }
+
+    .legs{
+      .left-leg{
+        height: 150px;
+      }
+      .right-leg{
+        height: 150px;
+      }
+    }
+  }
+
+  .header-con{
+    img{
+      width: 250px;
+    }
+  }
 }
