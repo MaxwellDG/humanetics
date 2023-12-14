@@ -1,11 +1,54 @@
 .App {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
+}
+
+.content{
+  display: flex;
+  flex-grow: 1;
   flex-direction: column;
+  row-gap: 50px;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+}
+
+.main{
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+}
+
+.spin-con{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 600;
+  width: 600;
+}
+
+.header-con{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  img{
+    width: 250px;
+    margin: 10px;
+  }
+
+  p{
+    margin: 10px;
+  }
 }
 
 .dummy-con {
@@ -34,12 +77,31 @@
       top: 0;
       left: 50%;
       transform: translate(-50%, -50%);
+      position: relative;
+
+      &::before{
+        content: "1";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .two {
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 50%);
+
+      &::before{
+        content: "2";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
   }
 
@@ -54,30 +116,75 @@
       top: 100px;
       left: 100px;
       transform: translate(-50%, -50%);
+
+      &::before{
+        content: "3";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .four {
       top: 100px;
       right: 100px;
       transform: translate(50%, -50%);
+
+      &::before{
+        content: "4";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .five {
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 50%);
+
+      &::before{
+        content: "5";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 100%;
+        transform: translate(-50%);
+      }
     }
 
     .six{
       top: 50px;
       left: 0;
       transform: translate(-50%, -50%);
+
+      &::before{
+        content: "6";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .seven{
       top: 50px;
       right: 0;
       transform: translate(50%, -50%);
+
+      &::before{
+        content: "7";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .left-forearm {
@@ -127,12 +234,30 @@
       bottom: 0;
       left: 0;
       transform: translate(-50%, 50%);
+
+      &::before{
+        content: "8";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .nine {
       bottom: 0;
       right: 0;
       transform: translate(50%, 50%);
+
+      &::before{
+        content: "9";
+        color: black;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
 
     .right-leg {
