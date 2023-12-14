@@ -67,7 +67,9 @@ function App() {
 
       setRotation(d - startingAngle);
       return (spinnerRef.current.style.transform =
-        "translate(-50%, -50%) rotate(" + (_rotation + angle) + "deg)");
+        "rotate(" + (_rotation + angle) + "deg)");
+      // return (spinnerRef.current.style.transform =
+      //   "translate(-50%, -50%) rotate(" + (_rotation + angle) + "deg)");
     }
   }
 
@@ -85,8 +87,8 @@ function App() {
           >
             <DummyContainer nodeColours={nodeColours} />
           </div>
-          <p className="spin-text">{` --- Spin me --- `}</p>
         </div>
+          <p className="spin-text">{` --- Spin me --- `}</p>
         <InputContainer changeColours={changeColours} />
       </div>
     </div>
