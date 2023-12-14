@@ -85,6 +85,7 @@ function App() {
           >
             <DummyContainer nodeColours={nodeColours} />
           </div>
+          <p className="spin-text">{` --- Spin me --- `}</p>
         </div>
         <InputContainer changeColours={changeColours} />
       </div>
